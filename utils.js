@@ -21,7 +21,7 @@ find_item = function(haystack, conditions) {
 }
 
 is_type = function(type, el) { 
-  console.log(type, el.role())
+  //console.log(type, el.role())
   var re = new RegExp(type, "gi")
   return el.role().search(re) != -1
 }
@@ -33,7 +33,7 @@ has_description = function(des, el) {
 }
 
 has_title = function(title, el) {
-  console.log(title, el.title())
+  //console.log(title, el.title())
   var re = new RegExp(title, "gi")
   return el.title().search(re) != -1
 }
@@ -112,8 +112,8 @@ choose_pop_up = function(target_process, value, el) {
 wait_and_action = function(haystack, conditions, action) {
   wait_for(function() {
     try {
-      console.log('Searching element')
-      console.log('----------------')
+      //console.log('Searching element')
+      //console.log('----------------')
       var item = find_item(haystack, conditions)
       
       if (item != undefined) {
